@@ -1,0 +1,45 @@
+<!-- LOGGER CONFIGURATION -->
+<configuration>
+    <!-- Define the log directory -->
+    <property name="LOG_DIR" value="target/test-artifacts/logs" />
+    <!-- Define the pattern for log messages -->
+    <property name="FILE_NAME_PATTERN" value="${LOG_DIR}/test_execution.%d{yyyy-MM-dd}.log" />
+    <!-- Define the pattern for log messages -->
+    <property name="LOG_PATTERN" value="Time_Stamp=%d{yyyy-MM-dd HH:mm:ss} Thread_Name=[%thread] Log_Level=[%-5level] Logger=%logger{36} Message => %msg%n" />
+
+    <!-- Console Appender -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <!-- File Appender -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${FILE_NAME_PATTERN}</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+        <!--    Uncomment the below block to get logs from specific threads matching the threadNamePattern-->
+        <!--        <filter class="com.spring.springboot.testautomation.webframework.logging.ThreadNameFilter">-->
+        <!--            <threadNamePattern>TestNG</threadNamePattern>-->
+        <!--        </filter>-->
+    </appender>
+
+    <!-- Set the logging level and appenders for automation framework and tests -->
+    <!--    Get logs generated from the automation framework and tests-->
+    <logger name="com.spring.springboot.testautomation" level="INFO" additivity="false">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="FILE" />
+    </logger>
+
+    <!-- Set the logging level and appenders for all contexts -->
+    <!--    Get logs from all contexts -->
+    <root level="ERROR">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="FILE" />
+    </root>
+</configuration>

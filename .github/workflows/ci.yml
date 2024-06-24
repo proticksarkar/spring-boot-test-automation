@@ -1,0 +1,56 @@
+# This workflow will build a Spring Boot based Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven
+
+name: CI/CD Pipeline for Java Project with End-to-End Tests and Reporting
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - feature/*
+  pull_request:
+    branches:
+      - main
+      - develop
+      - feature/*
+
+jobs:
+  build_and_test:
+    runs-on: windows-latest
+    permissions: write-all
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+
+      #- name: Build and Run Tests with Maven
+      #  run: mvn clean install --file pom.xml
+
+      - name: Build and Run Tests with Maven
+        run: mvn clean test -f pom.xml "-Pweb" "-Dthreadcount=3" "-DwebBrowserType=chrome" "-DwebExecutionType=local" "-Dcucumber.filter.tags=@regression"
+
+      - name: Annotate Cucumber Test Results
+        uses: deblockt/cucumber-report-annotations-action@v1.7
+        with:
+          access-token: ${{ secrets.GITHUB_TOKEN }}
+          path: "**/cucumber-result.json"
+
+      #- name: Publish report as artifact
+      #  uses: actions/upload-artifact@v4
+      #  with:
+      #      name: cucumber-report
+      #      path: target/test-artifacts/reports/cucumber-reports/cucumber-result.html
+
+      - name: Deploy Reports to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: target/test-artifacts/reports
