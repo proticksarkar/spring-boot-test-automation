@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>SpringBoot-TestAutomation</td>
+        <td>1</td>
+      <td>28 Jun 2024, 18:51</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.spring.springboot.testautomation.steps.applications.excel.HandlingExcelSteps.userLoadsExcelDataAndMapsItToPOJO()</td>
+              <td>1</td>
+              <td class="duration" data-value="938467700">0.938</td>
+              <td class="duration" data-value="938467700">0.938</td>
+              <td class="duration" data-value="938467700">0.938</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.spring.springboot.testautomation.steps.applications.excel.HandlingExcelSteps.userSelectsScenarioAndGetsCorrespondingData(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="16869400">0.016</td>
+              <td class="duration" data-value="16869400">0.016</td>
+              <td class="duration" data-value="16869400">0.016</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.spring.springboot.testautomation.steps.applications.excel.HandlingExcelSteps.userVerifiesTheFetchedData()</td>
+              <td>1</td>
+              <td class="duration" data-value="6999300">0.006</td>
+              <td class="duration" data-value="6999300">0.006</td>
+              <td class="duration" data-value="6999300">0.006</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.spring.springboot.testautomation.steps.applications.theinternetherokuapp.LoginSteps.iAmOnLoginPage()</td>
+              <td>3</td>
+              <td class="duration" data-value="35507503866">35.507</td>
+              <td class="duration" data-value="35507503866">51.470</td>
+              <td class="duration" data-value="106522511600">1:46.522</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.spring.springboot.testautomation.steps.applications.theinternetherokuapp.LoginSteps.iTryToLoginWithUserNameAndPassword(java.lang.String,java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="963924700">0.963</td>
+              <td class="duration" data-value="963924700">1.163</td>
+              <td class="duration" data-value="2891774100">2.891</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.spring.springboot.testautomation.steps.applications.theinternetherokuapp.LoginSteps.iVerifyInvalidPasswordMessage(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="237924300">0.237</td>
+              <td class="duration" data-value="237924300">0.237</td>
+              <td class="duration" data-value="237924300">0.237</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.spring.springboot.testautomation.steps.applications.theinternetherokuapp.LoginSteps.iVerifyInvalidUserNameMessage(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="414851600">0.414</td>
+              <td class="duration" data-value="414851600">0.414</td>
+              <td class="duration" data-value="414851600">0.414</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.spring.springboot.testautomation.steps.applications.theinternetherokuapp.LoginSteps.iVerifySuccessfulLoginMessage(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="173634800">0.173</td>
+              <td class="duration" data-value="173634800">0.173</td>
+              <td class="duration" data-value="173634800">0.173</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.spring.springboot.testautomation.steps.applications.theinternetherokuapp.LogoutSteps.iAmOnSecureAreaPage()</td>
+              <td>1</td>
+              <td class="duration" data-value="63668600">0.063</td>
+              <td class="duration" data-value="63668600">0.063</td>
+              <td class="duration" data-value="63668600">0.063</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.spring.springboot.testautomation.steps.applications.theinternetherokuapp.LogoutSteps.iLoginToTheWebsiteUsingUsernameAndPasswordAndVerifySuccessfulLogin(io.cucumber.datatable.DataTable)</td>
+              <td>1</td>
+              <td class="duration" data-value="3802309900">3.802</td>
+              <td class="duration" data-value="3802309900">3.802</td>
+              <td class="duration" data-value="3802309900">3.802</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.spring.springboot.testautomation.steps.applications.theinternetherokuapp.LogoutSteps.iTryToLogoutOfTheWebsite()</td>
+              <td>1</td>
+              <td class="duration" data-value="248795500">0.248</td>
+              <td class="duration" data-value="248795500">0.248</td>
+              <td class="duration" data-value="248795500">0.248</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.spring.springboot.testautomation.steps.applications.theinternetherokuapp.LogoutSteps.iVerifySuccessfulLogoutMessage(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="95093500">0.095</td>
+              <td class="duration" data-value="95093500">0.095</td>
+              <td class="duration" data-value="95093500">0.095</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.spring.springboot.testautomation.steps.applications.theinternetherokuapp.NewWindowSteps.iAmOnOpenNewWindowPage()</td>
+              <td>1</td>
+              <td class="duration" data-value="3035771300">3.035</td>
+              <td class="duration" data-value="3035771300">3.035</td>
+              <td class="duration" data-value="3035771300">3.035</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.spring.springboot.testautomation.steps.applications.theinternetherokuapp.NewWindowSteps.iOpenANewWindowAndSwitchToIt()</td>
+              <td>1</td>
+              <td class="duration" data-value="171593400">0.171</td>
+              <td class="duration" data-value="171593400">0.171</td>
+              <td class="duration" data-value="171593400">0.171</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.spring.springboot.testautomation.steps.applications.theinternetherokuapp.NewWindowSteps.iSwitchBackToParentWindow()</td>
+              <td>1</td>
+              <td class="duration" data-value="15992900">0.015</td>
+              <td class="duration" data-value="15992900">0.015</td>
+              <td class="duration" data-value="15992900">0.015</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.spring.springboot.testautomation.steps.applications.theinternetherokuapp.NewWindowSteps.iVerifyThePageTitle(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="148972900">0.148</td>
+              <td class="duration" data-value="148972900">0.226</td>
+              <td class="duration" data-value="297945800">0.297</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.spring.springboot.testautomation.webframework.hooks.ExecutionHook.afterScenario(io.cucumber.java.Scenario)</td>
+              <td>6</td>
+              <td class="duration" data-value="8265693983">8.265</td>
+              <td class="duration" data-value="8265693983">47.789</td>
+              <td class="duration" data-value="49594163900">49.594</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.spring.springboot.testautomation.webframework.hooks.ExecutionHook.beforeScenario(io.cucumber.java.Scenario)</td>
+              <td>6</td>
+              <td class="duration" data-value="53598733">0.053</td>
+              <td class="duration" data-value="53598733">0.104</td>
+              <td class="duration" data-value="321592400">0.321</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>18</td>
+            <td>33</td>
+            <td class="duration">5.116</td>
+            <td class="duration">1:46.522</td>
+            <td class="duration">2:48.849</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
