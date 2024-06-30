@@ -79,18 +79,18 @@ font-src * data: blob: 'unsafe-inline';"/>
     "labels": [
       "com.spring.springboot.testautomation.webframework.hooks.ExecutionHook.beforeScenario(io.cucumber.java.Scenario)",
       "I am on Login page",
-      "I try to login with userName \"tomsmith\" and password \"invalidpassword\"",
-      "I verify invalid password message \"Your password is invalid!\"",
+      "I try to login with userName \"tomsmith\" and password \"SuperSecretPassword!\"",
+      "I verify successful login message \"You logged into a secure area!\"",
       "com.spring.springboot.testautomation.webframework.hooks.ExecutionHook.afterScenario(io.cucumber.java.Scenario)"
     ],
     "datasets": [
       {
         "data": [
-          0.123,
-          51.569,
-          0.997,
-          0.193,
-          0.353
+          0.097,
+          16.618,
+          0.986,
+          0.217,
+          0.231
         ],
         "backgroundColor": [
           "rgba(96, 204, 121, 1.000)",
@@ -161,7 +161,7 @@ font-src * data: blob: 'unsafe-inline';"/>
         {
           "ticks": {
             "min": 0,
-            "stepSize": 51.569,
+            "stepSize": 16.618,
             "display": true
           },
           "stacked": true,
@@ -264,7 +264,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                         <a class="nav-link " href="pages/feature-summary.html">All Features</a>
                 </li>
             </ul>
-            <span class="text-light">2024-06-30 05:50:32</span>
+            <span class="text-light">2024-06-30 05:52:55</span>
         </div>
     </nav>
     <main role="main" class="container">
@@ -274,7 +274,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                             <a href="pages/feature-scenarios/feature_1.html">Login Feature</a>
                         <span class="small">classpath:features/applications/theinternetherokuapp/Login.feature</span>
                     </h5>
-                    <h3>I login to the website with valid userName and invalid password</h3>
+                    <h3>I login to the website with valid userName and valid password</h3>
             </div>
 
 
@@ -293,15 +293,17 @@ font-src * data: blob: 'unsafe-inline';"/>
         <div class="card h-100">
                 <div class="card-header">Scenario Info</div>
             <div class="card-body">
-                <li class="list-group-item">Started on:<br>2024-06-30 05:49:30</li>
-                <li class="list-group-item">Ended on:<br>2024-06-30 05:50:24</li>
-            <li class="list-group-item">Test Runtime:<br>0m 53s 240ms</li>
+                <li class="list-group-item">Started on:<br>2024-06-30 05:52:30</li>
+                <li class="list-group-item">Ended on:<br>2024-06-30 05:52:48</li>
+            <li class="list-group-item">Test Runtime:<br>0m 18s 154ms</li>
             <li class="list-group-item">
                     <a href="pages/tag-scenarios/tag_web.html">@web</a>,
 
-                    <a href="pages/tag-scenarios/tag_negative.html">@negative</a>,
+                    <a href="pages/tag-scenarios/tag_positive.html">@positive</a>,
 
-                    <a href="pages/tag-scenarios/tag_regression.html">@regression</a>            </li>
+                    <a href="pages/tag-scenarios/tag_regression.html">@regression</a>,
+
+                    <a href="pages/tag-scenarios/tag_smoke.html">@smoke</a>            </li>
             </div>
         </div>
     </div>
@@ -356,7 +358,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 51s 569ms
+                                0m 16s 618ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -371,11 +373,11 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 <span class="text-left">2.</span>
                                 <span data-toggle="tooltip" title="com.spring.springboot.testautomation.steps.applications.theinternetherokuapp.LoginSteps.iTryToLoginWithUserNameAndPassword(java.lang.String,java.lang.String)">
                                     <a href="pages/step-scenarios/step_1696850819.html"><span
-                                                class="keyword">When </span> I try to login with userName <span class="parameter">"tomsmith"</span> and password <span class="parameter">"invalidpassword"</span></a>
+                                                class="keyword">When </span> I try to login with userName <span class="parameter">"tomsmith"</span> and password <span class="parameter">"SuperSecretPassword!"</span></a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 00s 997ms
+                                0m 00s 986ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -388,13 +390,13 @@ font-src * data: blob: 'unsafe-inline';"/>
                         <div class="row row_passed table-row-passed">
                             <div class="col-9 text-left">
                                 <span class="text-left">3.</span>
-                                <span data-toggle="tooltip" title="com.spring.springboot.testautomation.steps.applications.theinternetherokuapp.LoginSteps.iVerifyInvalidPasswordMessage(java.lang.String)">
-                                    <a href="pages/step-scenarios/step_01623327861.html"><span
-                                                class="keyword">Then </span> I verify invalid password message <span class="parameter">"Your password is invalid!"</span></a>
+                                <span data-toggle="tooltip" title="com.spring.springboot.testautomation.steps.applications.theinternetherokuapp.LoginSteps.iVerifySuccessfulLoginMessage(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_0461934866.html"><span
+                                                class="keyword">Then </span> I verify successful login message <span class="parameter">"You logged into a secure area!"</span></a>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 00s 193ms
+                                0m 00s 217ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -419,7 +421,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                         <i>com.spring.springboot.testautomation.webframework.hooks.ExecutionHook.afterScenario(io.cucumber.java.Scenario)</i>
                                     </div>
                                     <div class="col-2 text-left small">
-                                        0m 00s 353ms
+                                        0m 00s 231ms
                                     </div>
                                     <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -427,24 +429,24 @@ font-src * data: blob: 'unsafe-inline';"/>
                                     </div>
             <div class="row w-100 p-3 m-0 scenarioAttachment">
                 <div class="w-100 p-1 m-0 border-bottom small text-left">
-                    <a class="btn-link" data-toggle="collapse" href="#expandable592781217" role="button"
-                       aria-expanded="false" aria-controls="expandable592781217">Toggle</a> |
+                    <a class="btn-link" data-toggle="collapse" href="#expandable101084405" role="button"
+                       aria-expanded="false" aria-controls="expandable101084405">Toggle</a> |
                         Browser Console Log (TXT attachment)
                 </div>
                 <div class="w-100 text-left m-auto">
-                    <div class="w-100 text-left m-auto collapse " id="expandable592781217">
-                            <pre class="embedding-content small embedded-txt">[SEVERE] -- https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1719726620948r0.07423669796351828&wxhr=true&t=1719726620953&f=298349752,318188263 - Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+                    <div class="w-100 text-left m-auto collapse " id="expandable101084405">
+                            <pre class="embedding-content small embedded-txt">[SEVERE] -- https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1719726765502r0.32360702709172484&wxhr=true&t=1719726765507&f=298349752,318188263 - Failed to load resource: net::ERR_NAME_NOT_RESOLVED
 [SEVERE] -- https://the-internet.herokuapp.com/favicon.ico - Failed to load resource: the server responded with a status of 404 (Not Found)
-[SEVERE] -- https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&n=engagement&g=298283957&u=oeu1719726620948r0.07423669796351828&wxhr=true&t=1719726621878&f=298349752,318188263 - Failed to load resource: net::ERR_NAME_NOT_RESOLVED
-[SEVERE] -- https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Flogin&u=oeu1719726620948r0.07423669796351828&wxhr=true&t=1719726621926&f=298349752,318188263 - Failed to load resource: net::ERR_NAME_NOT_RESOLVED
-[SEVERE] -- https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&n=engagement&g=298283957&u=oeu1719726620948r0.07423669796351828&wxhr=true&t=1719726621878&f=298349752,318188263 - Failed to load resource: net::ERR_NAME_NOT_RESOLVED
-[SEVERE] -- https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1719726620948r0.07423669796351828&wxhr=true&t=1719726620953&f=298349752,318188263 - Failed to load resource: net::ERR_NAME_NOT_RESOLVED
-[SEVERE] -- https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&n=engagement&g=298283957&u=oeu1719726620948r0.07423669796351828&wxhr=true&t=1719726623502&f=298349752,318188263 - Failed to load resource: net::ERR_NAME_NOT_RESOLVED
-[SEVERE] -- https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&n=engagement&g=298283957&u=oeu1719726620948r0.07423669796351828&wxhr=true&t=1719726623502&f=298349752,318188263 - Failed to load resource: net::ERR_NAME_NOT_RESOLVED
-[SEVERE] -- https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Flogin&u=oeu1719726620948r0.07423669796351828&wxhr=true&t=1719726623641&f=298349752,318188263 - Failed to load resource: net::ERR_NAME_NOT_RESOLVED
-[SEVERE] -- https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Flogin&u=oeu1719726620948r0.07423669796351828&wxhr=true&t=1719726621926&f=298349752,318188263 - Failed to load resource: net::ERR_NAME_NOT_RESOLVED
-[SEVERE] -- https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&n=engagement&g=298283957&u=oeu1719726620948r0.07423669796351828&wxhr=true&t=1719726621878&f=298349752,318188263 - Failed to load resource: net::ERR_NAME_NOT_RESOLVED
-[SEVERE] -- https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1719726620948r0.07423669796351828&wxhr=true&t=1719726620953&f=298349752,318188263 - Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+[SEVERE] -- https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&n=engagement&g=298283957&u=oeu1719726765502r0.32360702709172484&wxhr=true&t=1719726766671&f=298349752,318188263 - Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+[SEVERE] -- https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Flogin&u=oeu1719726765502r0.32360702709172484&wxhr=true&t=1719726766786&f=298349752,318188263 - Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+[SEVERE] -- https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&n=engagement&g=298283957&u=oeu1719726765502r0.32360702709172484&wxhr=true&t=1719726766671&f=298349752,318188263 - Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+[SEVERE] -- https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1719726765502r0.32360702709172484&wxhr=true&t=1719726765507&f=298349752,318188263 - Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+[SEVERE] -- https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&n=engagement&g=298283957&u=oeu1719726765502r0.32360702709172484&wxhr=true&t=1719726767656&f=298349752,318188263 - Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+[SEVERE] -- https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fsecure&u=oeu1719726765502r0.32360702709172484&wxhr=true&t=1719726767884&f=298349752,318188263 - Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+[SEVERE] -- https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&n=engagement&g=298283957&u=oeu1719726765502r0.32360702709172484&wxhr=true&t=1719726767656&f=298349752,318188263 - Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+[SEVERE] -- https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Flogin&u=oeu1719726765502r0.32360702709172484&wxhr=true&t=1719726766786&f=298349752,318188263 - Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+[SEVERE] -- https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&n=engagement&g=298283957&u=oeu1719726765502r0.32360702709172484&wxhr=true&t=1719726766671&f=298349752,318188263 - Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+[SEVERE] -- https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1719726765502r0.32360702709172484&wxhr=true&t=1719726765507&f=298349752,318188263 - Failed to load resource: net::ERR_NAME_NOT_RESOLVED
 </pre>
                     </div>
                 </div>
@@ -461,7 +463,7 @@ font-src * data: blob: 'unsafe-inline';"/>
 
 <footer class="footer navbar-dark">
     <div class="container-fluid">
-        <span><a href="https://github.com/trivago/cluecumber-report-plugin" target="_blank" class="text-white">Cluecumber Report Plugin version 2.9.4</a> - Report generated on 2024-06-30 05:50:32.</span>
+        <span><a href="https://github.com/trivago/cluecumber-report-plugin" target="_blank" class="text-white">Cluecumber Report Plugin version 2.9.4</a> - Report generated on 2024-06-30 05:52:55.</span>
     </div>
 </footer>    </body>
     </html>
